@@ -1,0 +1,29 @@
+{
+	"name": "mostly-ai-challenge",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"pree2e": "npx playwright install chromium",
+		"pw-set-e2e": "playwright test --config=e2e/playwright.e2e.config.ts",
+		"e2e": "yarn pw-set-e2e",
+		"e2e-run-with-html-reporter": "yarn e2e && yarn e2e-show-html-report",
+		"e2e-show-html-reporter": "playwright show-report e2e/reports/html",
+		"e2e-debug-tests": "yarn e2e --debug",
+		"pw-ui": "yarn e2e --ui"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sinzro/mostly-ai-challenge.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/sinzro/mostly-ai-challenge/issues"
+	},
+	"homepage": "https://github.com/sinzro/mostly-ai-challenge#readme",
+	"devDependencies": {
+		"@playwright/test": "^1.36.1",
+		"typescript": "^5.1.6"
+	}
+}
